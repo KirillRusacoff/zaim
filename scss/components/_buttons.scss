@@ -1,0 +1,36 @@
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.button {
+    padding: 1rem 2rem;
+
+    border: 1px solid $black-color;
+    border-radius: 1rem;
+
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    transition: all .2s ease-in;
+
+    &:hover {
+        border-color: $accent-color;
+        background-color: $accent-color;
+
+        color: $light-color;
+    }
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+        padding: 1rem;
+        font-size: 1.4rem;
+    }
+
+    /* Mobile XS */
+    @media (max-width: 424px) {
+        font-size: 1.35rem;
+    }
+}

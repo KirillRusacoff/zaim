@@ -1,0 +1,30 @@
+.offers {
+    padding: 6rem 0;
+
+    &__wrapper {
+        width: 90%;
+        margin: 0 auto;
+
+        /* Mobile XS */
+        @media (max-width: 425px) {
+            width: 80%;
+        }
+
+        h2 {
+            margin-bottom: 5rem;
+
+            text-align: center;
+            text-transform: uppercase;
+
+            /* Mobile XS */
+            @media (max-width: 599px) {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+        padding: 3rem 0;
+    }
+}

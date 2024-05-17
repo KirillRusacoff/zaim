@@ -1,0 +1,31 @@
+//base
+@import './base/vars';
+@import './base/fonts';
+@import './base/reset';
+@import './base/base';
+
+
+//sections
+@import './sections/header';
+@import './sections/main';
+@import './sections/answers';
+@import './sections/reviews';
+@import './sections/offers';
+@import './sections/footer';
+
+//components
+@import './components/logo';
+@import './components/calculator';
+@import './components/nav';
+@import './components/buttons';
+@import './components/titles';
+@import './components/slider';
+@import './components/faq';
+@import './components/offer-slider';
+@import './components/menu-button';
+@import './components/hidden-menu';
+@import './components/registration';
+@import './components/data';
+@import './components/choice';
+@import './components/loader';
+@import './components/card';

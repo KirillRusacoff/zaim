@@ -1,0 +1,41 @@
+.answer {
+    padding: 3rem 0 0;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            margin-bottom: 5rem;
+
+            text-align: center;
+            text-transform: uppercase;
+
+            /* Mobile XS */
+            @media (max-width: 599px) {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    &__inner {
+        width: 60%;
+        margin: 0 auto;
+
+        /* Mobile XS */
+        @media (max-width: 899px) {
+            width: 80%;
+        }
+
+        /* Mobile XS */
+        @media (max-width: 599px) {
+            width: 100%;
+        }
+    }
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+        padding: 4rem 0;
+    }
+}

@@ -1,0 +1,27 @@
+.nav {
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 7rem;
+    }
+
+    &__item {
+        transition: color .2s ease-in;
+
+        &:hover {
+            color: $accent-color;
+        }
+
+        &--main {
+            display: none;
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 972px) {
+        display: none;
+    }
+}

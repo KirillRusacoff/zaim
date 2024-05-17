@@ -1,0 +1,21 @@
+.logo {
+    color: $accent-color;
+    text-align: center;
+
+    h1 {
+        /* Mobile XS */
+        @media (max-width: 599px) {
+            font-size: 2.6rem;
+        }
+    }
+
+    span {
+        display: block;
+        font-size: 1.3rem;
+
+        /* Mobile XS */
+        @media (max-width: 599px) {
+            font-size: 1.1rem;
+        }
+    }
+}

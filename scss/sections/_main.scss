@@ -1,0 +1,15 @@
+.main {
+    padding: 6rem 0;
+
+    h2 {
+        /* Mobile XS */
+        @media (max-width: 599px) {
+            font-size: 1.8rem;
+        }
+    }
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+        padding: 3rem 0;
+    }
+}

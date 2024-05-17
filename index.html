@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Назайм</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <!-- scripts -->
+    <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
+    <link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/img/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div class="registration">
+        <div class="registration__middle">
+            <button type="button" class="registration__cross">
+                <img src="./img/icons/cross.svg" alt="крестик для закрытия блока">
+            </button>
+            <h2>Введите номер телефона для регистрации</h2>
+            <input type="tel" name="phone" placeholder="+7 (___) ___-__-__">
+            <button type="button" class="registration__button" id="code">Получить код</button>
+            <div class="registration__code">
+                <h2>Введите код из СМС сообщения</h2>
+                <input type="number" name="code-sms" placeholder="Код из СМС">
+                <button type="button" class="registration__button" id="ok">Подтвердить</button>
+            </div>
+        </div>
+    </div>
+    <div class="data">
+        <div class="data__middle">
+            <button type="button" class="data__cross">
+                <img src="./img/icons/cross.svg" alt="крестик для закрытия блока">
+            </button>
+            <form action="#" class="data__form" method="post">
+                <h2>Личные данные</h2>
+                <div class="data__block">
+                    <input type="text" name="first_name" placeholder="имя" required>
+                    <input type="text" name="second_name" placeholder="фамилия" required>
+                    <input type="text" name="third_name" placeholder="отчество" required>
+                </div>
+                <h2>Паспортные данные</h2>
+                <div class="data__block">
+                    <input type="number" name="pass_series" placeholder="серия" required>
+                    <input type="number" name="pass_number" placeholder="номер" required>
+                </div>
+                <h2>Контактные данные</h2>
+                <div class="data__block">
+                    <input type="tel" name="phone_number" placeholder="+7 (___) ___-__-__" required>
+                    <input type="email" name="email" placeholder="__@_____" required>
+                </div>
+                <div class="data__check">
+                    <input type="checkbox" id="check-01">
+                    <label for="check-01">Я подтверждаю, что все введенные мной данные верны</label>
+                </div>
+                <div class="data__check">
+                    <input type="checkbox" id="check-02">
+                    <label for="check-02">Я принимаю условия <u>пользовательского соглашения</u></label>
+                </div>
+                <div class="data__buttons">
+                    <button type="button" class="data__button" id="ok-2">Отправить</button>
+                    <button type="reset" class="data__button">Очистить форму</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="choice">
+        <div class="choice__middle">
+            <button type="button" class="choice__cross">
+                <img src="./img/icons/cross.svg" alt="крестик для закрытия блока">
+            </button>
+            <div class="choice__loader">
+                <h2>Добро пожаловать, уважаемый клиент!</h2>
+                <span>Мы подбираем для Вас лучшее предложение займа</span>
+                <span class="loader"></span>
+            </div>
+        </div>
+    </div>
+    <div class="hidden-menu">
+        <div class="hidden-menu__middle">
+            <div class="hidden-menu__title logo">
+                <h1>НАЗАЙМ</h1>
+                <span>агрегатор займов №1</span>
+            </div>
+            <ul class="hidden-menu__list">
+                <li class="nav__item--main"><a href="index.html">Главная</a></li>
+                <li class="nav__item--offers"><a href="#offers">Офферы</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#answer">FAQ</a></li>
+            </ul>
+            <button type="button" class="button hidden-menu__button">Личный кабинет</button>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="header__top">
+                <div class="logo">
+                    <h1>НАЗАЙМ</h1>
+                    <span>агрегатор займов №1</span>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item nav__item--main"><a href="index.html">Главная</a></li>
+                        <li class="nav__item nav__item--offers"><a href="#offers">Офферы</a></li>
+                        <li class="nav__item"><a href="#reviews">Отзывы</a></li>
+                        <li class="nav__item"><a href="#answer">FAQ</a></li>
+                    </ul>
+                </nav>
+                <div class="buttons">
+                    <button type="button" class="button">Личный кабинет</button>
+                    <button type="button" class="menu-button">
+                        <div class="menu-button__middle"></div>
+                    </button>
+                </div>
+            </div>
+            <div class="header__body">
+                <div class="header__inner">
+                    <div class="header__desc">
+                        <h2 class="title-1">Получи первый онлайн заём <span>под 0%</span></h2>
+                        <ul class="header__items">
+                            <li>Любая кредитная история</li>
+                            <li>Крайне высокий шанс одобрения</li>
+                            <li>Быстрое рассмотрение заявки</li>
+                            <li>Деньги на карту без визита в офис</li>
+                        </ul>
+                    </div>                    
+                    <div class="calculator">
+                        <h2>Калькулятор займа</h2>
+                        <div class="input-container">
+                            <label for="loanAmount">Сумма займа (в рублях): <output id="loanAmountValue">0</output> &#8381;</label>
+                            <input type="range" id="loanAmount" min="0" max="30000" step="500" value="10000">
+                            <div class="scale">
+                            <span>0</span><span>30 000 &#8381;</span>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <label for="loanTerm">Срок займа (в днях): <output id="loanTermValue">0</output> дней</label>
+                            <input type="range" id="loanTerm" min="0" max="30" step="1" value="10">
+                            <div class="scale">
+                            <span>0</span><span>15 дней</span><span>30 дней</span>
+                            </div>
+                        </div>
+                        <div class="calc-button-wrapper">
+                            <button type="button" class="button calc-button">Подобрать займ</button>
+                        </div>
+                        <div class="output-container">
+                            <p>Сумма займа:<br><span id="requestedAmount">0</span> <span>&#8381;</span></p>
+                            <p>Срок займа до:<br><span id="loanEndDate">-</span></p>
+                            <p>Сумма к возврату:<br><span id="totalRepayment">0</span> <span>&#8381;</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__result">
+                <div class="header__inner">
+                    <div class="header__desc">
+                        <h2 class="title-1" style="position: relative;"><span>Внимание!</span><br>Наше специальное предложение <img class="header__img" src="./img/main/offers/03.png" alt="логотип займа"></h2>
+                        <div class="header__list">
+                            <li>Сумма займа от 1500 рублей до 80000 рублей.</li>
+                            <li>Срок займа от 5 дней до 18 недель</li>
+                            <li>Первый онлайн заём под 0%</li>
+                            <li>Рассмотрение с любой кредитной историей</li>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__wrapper">
+                            <h2>Заполните данные карты</h2>
+                            <input type="number" name="card-number" placeholder="номер карты">
+                            <input type="text" name="card-validity" placeholder="срок карты">
+                            <input type="text" name="card-holder" placeholder="имя владельца">
+                            <button type="button" class="card__button">Получить деньги</button>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="title-2">Также рекомендуем следующие займы</h3>
+                <ul class="header__offers">
+                    <li class="card-mini">
+                        <ul class="card-mini__hidden">
+                            <li><img src="./img/icons/cross2.svg" alt="крестик для закрытия"></li>
+                            <li>Заём: от 1 000 до 100 000 рублей</li>
+                            <li>Срок займа: от 15 до 365 дней</li>
+                            <li>Процентная ставка: до 1% в день</li>
+                        </ul>
+                        <div class="card-mini__img">
+                            <img src="./img/main/offers/12.png" alt="логотип займа">
+                        </div>
+                        <hr>
+                        <div class="card-mini__buttons">
+                            <button type="button" class="card-mini__button">i</button>
+                            <button type="button">Получить деньги</button>
+                        </div>
+                    </li>
+                    <li class="card-mini">
+                        <ul class="card-mini__hidden">
+                            <li><img src="./img/icons/cross2.svg" alt="крестик для закрытия"></li>
+                            <li>Заём: от 3 000 до 60 000 рублей</li>
+                            <li>Срок займа: от 7 до 126 дней</li>
+                            <li>Новым клиентам первый займ под 0%</li>
+                        </ul>
+                        <div class="card-mini__img">
+                            <img src="./img/main/offers/18.png" alt="логотип займа">
+                        </div>
+                        <hr>
+                        <div class="card-mini__buttons">
+                            <button type="button" class="card-mini__button">i</button>
+                            <button type="button">Получить деньги</button>
+                        </div>
+                    </li>
+                    <li class="card-mini">
+                        <ul class="card-mini__hidden">
+                            <li><img src="./img/icons/cross2.svg" alt="крестик для закрытия"></li>
+                            <li>Заём: от 1 000 до 100 000 рублей</li>
+                            <li>Срок займа: от 16 до 180 дней</li>
+                            <li>Поцентная ставка - 0,8% в день</li>
+                        </ul>
+                        <div class="card-mini__img">
+                            <img src="./img/main/offers/21.png" alt="логотип займа">
+                        </div>
+                        <hr>
+                        <div class="card-mini__buttons">
+                            <button type="button" class="card-mini__button">i</button>
+                            <button type="button">Получить деньги</button>
+                        </div>
+                    </li>
+                    <li class="card-mini">
+                        <ul class="card-mini__hidden">
+                            <li><img src="./img/icons/cross2.svg" alt="крестик для закрытия"></li>
+                            <li>Заём: от 1 000 до 30 000 рублей</li>
+                            <li>Срок займа: от 5 до 30 дней</li>
+                            <li>Акция "0% на 7 дней" на 2024 год</li>
+                        </ul>
+                        <div class="card-mini__img">
+                            <img src="./img/main/offers/05.png" alt="логотип займа">
+                        </div>
+                        <hr>
+                        <div class="card-mini__buttons">
+                            <button type="button" class="card-mini__button">i</button>
+                            <button type="button">Получить деньги</button>
+                        </div>
+                    </li>
+                    <li class="card-mini">
+                        <ul class="card-mini__hidden">
+                            <li><img src="./img/icons/cross2.svg" alt="крестик для закрытия"></li>
+                            <li>Заём: от 2 000 до 30 000 рублей</li>
+                            <li>Срок займа: от 7 до 30 дней</li>
+                            <li>Первый заем для новых клиентов – 0%</li>
+                        </ul>
+                        <div class="card-mini__img">
+                            <img src="./img/main/offers/07.png" alt="логотип займа">
+                        </div>
+                        <hr>
+                        <div class="card-mini__buttons">
+                            <button type="button" class="card-mini__button">i</button>
+                            <button type="button">Получить деньги</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="offers" id="offers">
+            <div class="container">
+                <div class="offers__wrapper">
+                    <h2>Вот некоторые займы, с которыми мы работаем</h2>
+                    <div class="swiper offer-slider">
+                        <div class="swiper-wrapper offer-slider__wrapper">
+                            <div class="swiper-slide offer-slider__slide">
+                                <img src="./img/main/offers/12.png" alt="логотип оффера">
+                            </div>
+                            <div class="swiper-slide offer-slider__slide">
+                                <img src="./img/main/offers/18.png" alt="логотип оффера">
+                            </div>
+                            <div class="swiper-slide offer-slider__slide">
+                                <img src="./img/main/offers/03.png" alt="логотип оффера">
+                            </div>
+                            <div class="swiper-slide offer-slider__slide">
+                                <img src="./img/main/offers/21.png" alt="логотип оффера">
+                            </div>
+                            <div class="swiper-slide offer-slider__slide">
+                                <img src="./img/main/offers/05.png" alt="логотип оффера">
+                            </div>
+                            <div class="swiper-slide offer-slider__slide">
+                                <img src="./img/main/offers/07.png" alt="логотип оффера">
+                            </div>
+                            <!-- <div class="swiper-slide offer-slider__slide">
+                                <img src="./img/main/offers/07.png" alt="логотип оффера">
+                            </div>
+                            <div class="swiper-slide offer-slider__slide">
+                                <img src="./img/main/offers/08.png" alt="логотип оффера">
+                            </div>
+                            <div class="swiper-slide offer-slider__slide">
+                                <img src="./img/main/offers/09.png" alt="логотип оффера">
+                            </div>
+                            <div class="swiper-slide offer-slider__slide">
+                                <img src="./img/main/offers/10.png" alt="логотип оффера">
+                            </div> -->
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="offer-slider-second">
+                        <div class="swiper-slide offer-slider__slide">
+                            <img src="./img/main/offers/12.png" alt="логотип оффера">
+                        </div>
+                        <div class="swiper-slide offer-slider__slide">
+                            <img src="./img/main/offers/18.png" alt="логотип оффера">
+                        </div>
+                        <div class="swiper-slide offer-slider__slide">
+                            <img src="./img/main/offers/03.png" alt="логотип оффера">
+                        </div>
+                        <div class="swiper-slide offer-slider__slide">
+                            <img src="./img/main/offers/21.png" alt="логотип оффера">
+                        </div>
+                        <div class="swiper-slide offer-slider__slide">
+                            <img src="./img/main/offers/05.png" alt="логотип оффера">
+                        </div>
+                        <div class="swiper-slide offer-slider__slide">
+                            <img src="./img/main/offers/07.png" alt="логотип оффера">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews" id="reviews">
+            <div class="container">
+                <div class="reviews__wrapper">
+                    <h2>Отзывы клиентов микрозаймов</h2>
+                    <div class="swiper slider">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-wrapper slider-wrapper">
+                            <div class="swiper-slide slider__slide">
+                                <div class="slide__header">
+                                    <img src="./img/main/reviews/avatar-01.jpg" alt="фото клиента">
+                                    <div class="slide__title">
+                                        <span>Дмитрий</span>
+                                        <span>Оценка: 4 из 5</span>
+                                    </div>
+                                </div>
+                                <div class="slide__body">
+                                    <p>
+                                        Отличная компания, вежливые сотрудники, быстрое перечисление денежных средст, приложение быстрое и понятное, пошли на встречу одобрили нужную сумму, минус в одном что нужно сфотографировать себя с листком бумаги написать номер, это только дома можно сделать, в другом месте не получиться! А так всё хорошо операторы быстро отвечают, всё быстро и понятно!спасибо!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slider__slide">
+                                <div class="slide__header">
+                                    <img src="./img/main/reviews/avatar-02.jpg" alt="фото клиента">
+                                    <div class="slide__title">
+                                        <span>Анна</span>
+                                        <span>Оценка: 5 из 5</span>
+                                    </div>
+                                </div>
+                                <div class="slide__body">
+                                    <p>
+                                        Дадут совет идут на уступки , все четко одним словом, я доволен , и всем советую, многие друзья оформляют займы в этой микро финансовой организации, и самое главное можно делать пролонгацию займа вносить сумму больше запрашиваемой на любую часть суммы и эта часть идёт в уплату долга, и к дате совершения платежа сумма долга меньше. Очень удобно. Респект...
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slider__slide">
+                                <div class="slide__header">
+                                    <img src="./img/main/reviews/avatar-03.jpg" alt="фото клиента">
+                                    <div class="slide__title">
+                                        <span>Степан</span>
+                                        <span>Оценка: 5 из 5</span>
+                                    </div>
+                                </div>
+                                <div class="slide__body">
+                                    <p>
+                                        Не плохая компания, все быстро честно, прозрачно, если возвращаешь досрочно идёт пересчёт процента что очень хорошо. Очень выручает, чтоб лишний не искать где занять, конечно не хочется обращаться, но приходится так как пока в декрете а до конца месяца надо дожить.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="answer" id="answer">
+            <div class="container">
+                <div class="answer__wrapper">
+                    <h2>Вопросы и ответы</h2>
+                    <div class="answer__inner">
+                        <div class="faq">
+                            <label for="faq_1" class="faq__title">Каковы основные преимущества микрозаймов?</label>
+                            <input class="faq__input" type="checkbox" id="faq_1">
+                            <div class="faq__text">
+                                Основные преимущества микрозаймов включают быстрое одобрение, минимальные требования к документам, отсутствие необходимости предоставления залога и возможность получения средств даже с плохой кредитной историей.
+                            </div>
+                        </div>
+                        <div class="faq">
+                            <label for="faq_2" class="faq__title">Какой минимальный и максимальный срок выдачи микрозаймов?</label>
+                            <input class="faq__input" type="checkbox" id="faq_2">
+                            <div class="faq__text">
+                                Срок выдачи микрозаймов может варьироваться в зависимости от кредитора, но обычно колеблется от нескольких дней до нескольких месяцев.
+                            </div>
+                        </div>
+                        <div class="faq">
+                            <label for="faq_3" class="faq__title">Каковы основные требования к заемщикам для получения микрозайма?</label>
+                            <input class="faq__input" type="checkbox" id="faq_3">
+                            <div class="faq__text">
+                                Основные требования могут включать возрастные ограничения (обычно 18+), постоянный источник дохода и наличие паспорта.
+                            </div>
+                        </div>
+                        <div class="faq">
+                            <label for="faq_4" class="faq__title">Могу ли я получить микрозайм с плохой кредитной историей?</label>
+                            <input class="faq__input" type="checkbox" id="faq_4">
+                            <div class="faq__text">
+                                Да, некоторые кредиторы предоставляют микрозаймы даже людям с плохой кредитной историей, но процентная ставка может быть выше.
+                            </div>
+                        </div>
+                        <div class="faq">
+                            <label for="faq_5" class="faq__title">Можно ли получить микрозайм без официального источника дохода?</label>
+                            <input class="faq__input" type="checkbox" id="faq_5">
+                            <div class="faq__text">
+                                Некоторые кредиторы могут одобрить заявку на микрозайм без официального источника дохода, но это зависит от их политики и требований.
+                            </div>
+                        </div>
+                        <div class="faq">
+                            <label for="faq_6" class="faq__title">Могу ли я продлить срок погашения микрозайма?</label>
+                            <input class="faq__input" type="checkbox" id="faq_6">
+                            <div class="faq__text">
+                                Некоторые кредиторы предоставляют услугу продления срока погашения микрозайма, однако это может быть связано с дополнительными комиссиями и процентами.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <span>&copy; Назайм 2024г.</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.footer {
+    padding: 6rem 0;
+    
+    background-color: $accent-color;
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: $light-color;
+    }
+}

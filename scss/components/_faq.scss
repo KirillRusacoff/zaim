@@ -1,0 +1,47 @@
+.faq {
+    margin-bottom: 1rem;
+
+    border: 1px solid $second-color;
+
+    &__input {
+        appearance: none;
+        position: absolute;
+        width: 0;
+        height: 0;
+
+        &:checked + .faq__text {
+            display: block;
+
+            border-top: 1px solid $second-color;
+        }
+
+    }
+
+    &__title {
+        display: block;
+        padding: 2rem 3rem;
+
+        background-color: $second-color;
+
+        font-weight: 700;
+        color: $light-color;
+        cursor: pointer;
+
+        /* Mobile XS */
+        @media (max-width: 599px) {
+            padding: 2rem;
+            font-size: 1.4rem;
+        }
+    }
+
+    &__text {
+        display: none;
+        padding: 2rem 3rem;
+
+        /* Mobile XS */
+        @media (max-width: 599px) {
+            padding: 2rem;
+            font-size: 1.4rem;
+        }
+    }
+}

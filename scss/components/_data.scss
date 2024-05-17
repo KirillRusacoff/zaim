@@ -1,0 +1,162 @@
+.data{
+    position: fixed;
+    z-index: 4;
+    inset: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+
+    background-color: rgba($black-color, .85);
+
+    overflow-y: auto;
+
+    &--active {
+        display: flex;
+    }
+
+    &__middle {
+        position: relative;
+        padding: 3rem;
+        width: 45%;
+
+        background-color: $second-color;
+        border-radius: 1rem;
+        border: 3px solid $accent-color;
+
+        text-align: center;
+
+        /* Mobile */
+        @media (max-width: 1199px) {
+            width: 60%;
+        }
+
+        /* Mobile */
+        @media (max-width: 899px) {
+            width: 80%;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            width: 90%;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            pointer-events: none;
+            inset: 0;
+
+            background: url('./../img/header/header-bg.png') center / cover no-repeat;
+            opacity: .15;
+        }
+
+        h2 {
+            margin-bottom: 2rem;
+
+            font-size: 2rem;
+            color: $light-color;
+        }
+    }
+
+    &__cross {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    &__block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+
+        margin-bottom: 2rem;
+
+        /* Mobile XS */
+        @media (max-width: 599px) {
+            grid-template-columns: 1fr;
+        }
+
+        input {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+            height: 4rem;
+            padding: 0 2rem;
+
+            border-radius: 1rem;
+            border: 1px solid $accent-color;
+            outline-color: $accent-color;
+
+            /* Mobile XS */
+            @media (max-width: 599px) {
+                width: 70%;
+            }
+
+            /* Mobile XS */
+            @media (max-width: 425px) {
+                width: 90%;
+            }
+        }
+    }
+
+    &__check {
+        margin-left: 3rem;
+        margin-bottom: 2rem;
+
+        text-align: left;
+        color: $light-color;
+
+        /* Mobile XS */
+        @media (max-width: 599px) {
+            margin-left: 2rem;
+        }
+
+        u {
+            cursor: pointer;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+
+        /* Mobile XS */
+        @media (max-width: 599px) {
+            flex-direction: column;
+        }
+    }
+
+    &__button {
+        padding: 1rem 2rem;
+
+        border: 1px solid $white-color;
+        border-radius: 1rem;
+
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: $light-color;
+
+        transition: all .2s ease-in;
+
+        &:hover {
+            border-color: $accent-color;
+            background-color: $accent-color;
+
+            color: $light-color;
+        }
+
+        /* Mobile XS */
+        @media (max-width: 599px) {
+            width: 70%;
+        }
+
+        /* Mobile XS */
+        @media (max-width: 425px) {
+            width: 90%;
+        }
+    }
+}

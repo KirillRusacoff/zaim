@@ -1,0 +1,117 @@
+  .calculator {
+    max-width: 50rem;
+    width: 100%;
+    padding: 2rem 3rem;
+
+    background-color: rgba($accent-color, .4);
+    border-radius: 3rem;
+    border: 3px double $accent-color;
+
+    color: $light-color;
+
+    /* Mobile */
+    @media (max-width: 972px) {
+      max-width: 90%;
+      width: 90%;
+    }
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    /* Mobile XS */
+    @media (max-width: 425px) {
+      padding: 1.5rem 1rem;
+      font-size: 1.4rem;
+    }
+
+    h2 {
+      margin-bottom: 3rem;
+
+      text-align: center;
+      text-transform: uppercase;
+      color: $light-color;
+
+      /* Mobile XS */
+      @media (max-width: 425px) {
+        font-size: 2.1rem;
+      }
+    }
+  }
+  
+  .input-container {
+    margin-bottom: 2rem;
+  }
+  
+  input[type="range"] {
+    accent-color: $accent-color;
+    width: calc(100% - 10px);
+    margin-top: 1.5rem;
+  }
+  
+  .scale {
+    display: flex;
+    justify-content: space-between;
+    color: inherit;
+  }
+  
+  .scale span {
+    font-size: 0.8em;
+  }
+  
+  .output-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    /* Mobile XS */
+    @media (max-width: 425px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+
+      text-align: center;
+    }
+  }
+  
+  .output-container p {
+    margin: 5px 0;
+
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  
+  .output-container span {
+    font-weight: 400;
+  }
+
+  .calc-button {
+    width: 100%;
+    padding: 1.5rem 0;
+
+    border: 1px solid $accent-color !important;
+    background-color: $accent-color;
+    border-radius: 1rem;
+
+    font-weight: 700;
+    color: $light-color;
+
+    transition: all .3s ease-in;
+
+    &:hover {
+      background-color: $white-color !important;
+
+      color: $accent-color !important;
+    }
+
+
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-bottom: 2rem;
+    }
+  }
+  
